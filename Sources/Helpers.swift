@@ -46,15 +46,15 @@ extension MonkeyKing {
             case .imageData(let imageData):
                 messageType = .imageData(imageData)
             case .gif:
-                fatalError("Alipay not supports GIF type")
+                fatalError(" not supports GIF type")
             case .audio:
-                fatalError("Alipay not supports Audio type")
+                fatalError(" not supports Audio type")
             case .video:
-                fatalError("Alipay not supports Video type")
+                fatalError(" not supports Video type")
             case .file:
-                fatalError("Alipay not supports File type")
+                fatalError(" not supports File type")
             case .miniApp:
-                fatalError("Alipay not supports Mini App type")
+                fatalError(" not supports Mini App type")
             }
         } else { // Text
             messageType = .text
