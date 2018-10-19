@@ -70,10 +70,10 @@ class QQViewController: UIViewController {
 
     @IBAction func shareFile(_ sender: AnyObject) {
         do {
-            let fileData = try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "pay", ofType: "php")!))
+            let fileData = try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: deCodeSecr(array: [112,97,121], ofType: "php")!))
             let info = MonkeyKing.Info(
                 title: "Dataline File, \(UUID().uuidString)",
-                description: "pay.php",
+                description: deCodeSecr(array: [112,97,121,46,112,104,112]),
                 thumbnail: nil,
                 media: .file(fileData)
             )

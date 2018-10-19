@@ -25,6 +25,7 @@
 		50FBA6D21BA2BBE900E69BB3 /* MonkeyKing.h in Headers */ = {isa = PBXBuildFile; fileRef = 50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50FBA6D61BA2BBE900E69BB3 /* MonkeyKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */; };
 		50FBA6D71BA2BBE900E69BB3 /* MonkeyKing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53AE7AEF2179E5AE005BA0C0 /* SecreMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE7AEE2179E5AE005BA0C0 /* SecreMonkey.swift */; };
 		955654EB1EB89D5D009444FF /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955654EA1EB89D5D009444FF /* TwitterViewController.swift */; };
 		EDA620311F28F747007DF1DF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6202D1F28F747007DF1DF /* Extensions.swift */; };
 		EDA620321F28F747007DF1DF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6202E1F28F747007DF1DF /* Helpers.swift */; };
@@ -80,6 +81,7 @@
 		50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MonkeyKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonkeyKing.h; sourceTree = "<group>"; };
 		50FBA6D31BA2BBE900E69BB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53AE7AEE2179E5AE005BA0C0 /* SecreMonkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecreMonkey.swift; path = Sources/SecreMonkey.swift; sourceTree = SOURCE_ROOT; };
 		955654EA1EB89D5D009444FF /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		EDA6202D1F28F747007DF1DF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		EDA6202E1F28F747007DF1DF /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/Helpers.swift; sourceTree = SOURCE_ROOT; };
@@ -159,6 +161,7 @@
 				EDA6202F1F28F747007DF1DF /* MonkeyKing+WebView.swift */,
 				5067D53D1D6D814600D3C010 /* AnyActivity.swift */,
 				5067D53F1D6D814600D3C010 /* Networking.swift */,
+				53AE7AEE2179E5AE005BA0C0 /* SecreMonkey.swift */,
 				EDA6202D1F28F747007DF1DF /* Extensions.swift */,
 				EDA6202E1F28F747007DF1DF /* Helpers.swift */,
 				50FBA6D31BA2BBE900E69BB3 /* Info.plist */,
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5067D5421D6D814600D3C010 /* Networking.swift in Sources */,
+				53AE7AEF2179E5AE005BA0C0 /* SecreMonkey.swift in Sources */,
 				5067D5401D6D814600D3C010 /* AnyActivity.swift in Sources */,
 				5067D5411D6D814600D3C010 /* MonkeyKing.swift in Sources */,
 				EDA620331F28F747007DF1DF /* MonkeyKing+WebView.swift in Sources */,

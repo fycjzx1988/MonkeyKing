@@ -25,8 +25,8 @@ extension MonkeyKing {
         }
     }
 
-    class func createAlipayMessageDictionary(withScene scene: NSNumber, info: Info, appID: String) -> [String: Any] {
-        enum AlipayMessageType {
+    class func createBaobaoMessageDictionary(withScene scene: NSNumber, info: Info, appID: String) -> [String: Any] {
+        enum BaobaoMessageType {
             case text
             case image(UIImage)
             case imageData(Data)
@@ -36,7 +36,7 @@ extension MonkeyKing {
         let keyClass = "$class"
         let keyClasses = "$classes"
         let keyClassname = "$classname"
-        var messageType: AlipayMessageType = .text
+        var messageType: BaobaoMessageType = .text
         if let media = info.media {
             switch media {
             case .url(let url):

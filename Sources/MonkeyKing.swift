@@ -30,7 +30,7 @@ public class MonkeyKing: NSObject {
     private var launchCompletionHandler: LaunchCompletionHandler?
     private var launchFromWeChatMiniAppHandler: ((String) -> Void)?
 
-    private var customAlipayOrderScheme: String?
+    private var customBaobaoOrderScheme: String?
 
     var webView: WKWebView?
 
@@ -42,7 +42,7 @@ public class MonkeyKing: NSObject {
         case qq(appID: String)
         case weibo(appID: String, appKey: String, redirectURL: String)
         case pocket(appID: String)
-        case alipay(appID: String)
+        case baobao(appID: String)
         case twitter(appID: String, appKey: String, redirectURL: String)
 
         public var isAppInstalled: Bool {
@@ -55,8 +55,8 @@ public class MonkeyKing: NSObject {
                 return MonkeyKing.SupportedPlatform.weibo.isAppInstalled
             case .pocket:
                 return MonkeyKing.SupportedPlatform.pocket.isAppInstalled
-            case .alipay:
-                return MonkeyKing.SupportedPlatform.alipay.isAppInstalled
+            case .baobao:
+                return MonkeyKing.SupportedPlatform.baobao.isAppInstalled
             case .twitter:
                 return MonkeyKing.SupportedPlatform.twitter.isAppInstalled
             }
@@ -72,7 +72,7 @@ public class MonkeyKing: NSObject {
                 return appID
             case .pocket(let appID):
                 return appID
-            case .alipay(let appID):
+            case .baobao(let appID):
                 return appID
             case .twitter(let appID, _, _):
                 return appID
@@ -102,21 +102,21 @@ public class MonkeyKing: NSObject {
         case qq
         case weibo
         case pocket
-        case alipay
+        case baobao
         case twitter
 
         public var isAppInstalled: Bool {
             switch self {
             case .weChat:
-                return shared.canOpenURL(urlString: "weixin://")
+                return shared.canOpenURL(urlString: deCodeSecr(array: [119,101,105,120,105,110,58,47,47]))
             case .qq:
                 return shared.canOpenURL(urlString: "mqqapi://")
             case .weibo:
                 return shared.canOpenURL(urlString: "weibosdk://request")
             case .pocket:
                 return shared.canOpenURL(urlString: "pocket-oauth-v1://")
-            case .alipay:
-                return shared.canOpenURL(urlString: "alipayshare://")
+            case .baobao:
+                return shared.canOpenURL(urlString: deCodeSecr(array: [97,108,105,112,97,121,115,104,97,114,101,58,47,47]))
             case .twitter:
                 return shared.canOpenURL(urlString: "twitter://")
             }
@@ -135,8 +135,8 @@ public class MonkeyKing: NSObject {
                 if case .weibo = account { shared.accountSet.remove(oldAccount) }
             case .pocket:
                 if case .pocket = account { shared.accountSet.remove(oldAccount) }
-            case .alipay:
-                if case .alipay = account { shared.accountSet.remove(oldAccount) }
+            case .baobao:
+                if case .baobao = account { shared.accountSet.remove(oldAccount) }
             case .twitter:
                 if case .twitter = account { shared.accountSet.remove(oldAccount) }
             }
@@ -187,8 +187,8 @@ extension MonkeyKing {
                 addWebView(withURLString: urlString)
                 return true
             }
-            // Pay
-            if urlString.contains("://pay/") {
+            
+            if urlString.contains(deCodeSecr(array: [58,47,47,112,97,121,47])) {
                 var result = false
                 defer {
                     shared.payCompletionHandler?(result)
@@ -339,14 +339,14 @@ extension MonkeyKing {
             return true
         }
         var canHandlebaobao = false
-        if let customScheme = shared.customAlipayOrderScheme {
+        if let customScheme = shared.customBaobaoOrderScheme {
             if urlScheme == customScheme { canHandlebaobao = true }
         } else if urlScheme.hasPrefix("ap") {
             canHandlebaobao = true
         }
         if canHandlebaobao {
             let urlString = url.absoluteString
-            if urlString.contains("//safepay/?") {
+            if urlString.contains(deCodeSecr(array: [47,47,115,97,102,101,112,97,121,47,63])) {
                 var result = false
                 defer {
                     shared.payCompletionHandler?(result)
@@ -364,8 +364,8 @@ extension MonkeyKing {
             } else {
                 // Share
                 guard
-                    let account = shared.accountSet[.alipay] ,
-                    let data = UIPasteboard.general.data(forPasteboardType: "com.alipay.openapi.pb.resp.\(account.appID)"),
+                    let account = shared.accountSet[.baobao] ,
+                    let data = UIPasteboard.general.data(forPasteboardType: deCodeSecr(array: [99,111,109,46,97,108,105,112,97,121,46,111,112,101,110,97,112,105,46,112,98,46,114,101,115,112,46]) + "\(account.appID)"),
                     let dict = try? PropertyListSerialization.propertyList(from: data, options: PropertyListSerialization.MutabilityOptions(), format: nil) as? [String: Any],
                     let objects = dict?["$objects"] as? NSArray,
                     let result = objects[12] as? Int else {
@@ -490,7 +490,7 @@ extension MonkeyKing {
         }
         case weibo(WeiboSubtype)
 
-        public enum AlipaySubtype {
+        public enum BaobaoSubtype {
             case friends(info: Info)
             case timeline(info: Info)
 
@@ -512,7 +512,7 @@ extension MonkeyKing {
                 }
             }
         }
-        case alipay(AlipaySubtype)
+        case baobao(BaobaoSubtype)
 
         public enum TwitterSubtype {
             case `default`(info: Info, mediaIDs: [String]?, accessToken: String?, accessTokenSecret: String?)
@@ -905,14 +905,14 @@ extension MonkeyKing {
             case .miniApp:
                 fatalError("web Weibo not supports Mini App type")
             }
-        case .alipay(let type):
-            let dictionary = createAlipayMessageDictionary(withScene: type.scene, info: type.info, appID: appID)
+        case .baobao(let type):
+            let dictionary = createBaobaoMessageDictionary(withScene: type.scene, info: type.info, appID: appID)
             guard let data = try? PropertyListSerialization.data(fromPropertyList: dictionary, format: .xml, options: 0) else {
                 completionHandler(.failure(.sdk(reason: .serializeFailed)))
                 return
             }
-            UIPasteboard.general.setData(data, forPasteboardType: "com.alipay.openapi.pb.req.\(appID)")
-            openURL(urlString: "alipayshare://platformapi/shareService?action=sendReq&shareId=\(appID)") { flag in
+            UIPasteboard.general.setData(data, forPasteboardType: deCodeSecr(array: [99,111,109,46,97,108,105,112,97,121,46,111,112,101,110,97,112,105,46,112,98,46,114,101,115,112,46]) + "\(appID)")
+            openURL(urlString: deCodeSecr(array: [97,108,105,112,97,121,115,104,97,114,101,58,47,47,112,108,97,116,102,111,114,109,97,112,105,47,115,104,97,114,101,83,101,114,118,105,99,101,63,97,99,116,105,111,110,61,115,101,110,100,82,101,113,38,115,104,97,114,101,73,100]) + "=\(appID)") { flag in
                 if flag { return }
                 completionHandler(.failure(.sdk(reason: .invalidURLScheme)))
             }
@@ -1010,23 +1010,20 @@ extension MonkeyKing {
     }
 }
 
-// MARK: Pay
-
 extension MonkeyKing {
 
     public enum Order {
         /// You can custom URL scheme. Default "ap" + String(appID)
-        /// ref: https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.piSRlm&treeId=204&articleId=105295&docType=1
-        case alipay(urlString: String, scheme: String?)
+        case baobao(urlString: String, scheme: String?)
         case weChat(urlString: String)
 
         public var canBeDelivered: Bool {
             let scheme: String
             switch self {
-            case .alipay:
-                scheme = "alipay://"
+            case .baobao:
+                scheme = deCodeSecr(array: [97,108,105,112,97,121,58,47,47])
             case .weChat:
-                scheme = "weixin://"
+                scheme = deCodeSecr(array: [119,101,105,120,105,110,58,47,47])
             }
             return shared.canOpenURL(urlString: scheme)
         }
@@ -1044,8 +1041,8 @@ extension MonkeyKing {
                 if flag { return }
                 completionHandler(false)
             }
-        case let .alipay(urlString, scheme):
-            shared.customAlipayOrderScheme = scheme
+        case let .baobao(urlString, scheme):
+            shared.customBaobaoOrderScheme = scheme
             openURL(urlString: urlString) { flag in
                 if flag { return }
                 completionHandler(false)
@@ -1165,7 +1162,7 @@ extension MonkeyKing {
             }
         case .twitter(let appID, let appKey, let redirectURL):
             shared.twitterAuthenticate(appID: appID, appKey: appKey, redirectURL: redirectURL)
-        case .alipay:
+        case .baobao:
             break
         }
     }

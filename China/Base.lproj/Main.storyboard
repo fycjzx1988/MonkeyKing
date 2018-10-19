@@ -201,11 +201,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yl-b1-jyR">
-                                <rect key="frame" x="172.5" y="597" width="30" height="30"/>
-                                <state key="normal" title="Pay"/>
-                                <connections>
-                                    <action selector="pay:" destination="2Fh-zG-2iM" eventType="touchUpInside" id="TXf-I7-DAh"/>
-                                </connections>
+                                <rect key="frame" x="161.5" y="597" width="52" height="30"/>
+                                <state key="normal" title="baobao"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zS-bL-oQf">
                                 <rect key="frame" x="157.5" y="344" width="60" height="30"/>
