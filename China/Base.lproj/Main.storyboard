@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tAd-W5-7vp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tAd-W5-7vp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -216,14 +215,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7J-ug-Mpj">
-                                <rect key="frame" x="136" y="637" width="102" height="30"/>
+                                <rect key="frame" x="136.5" y="637" width="102" height="30"/>
                                 <state key="normal" title="OAuthForCode"/>
                                 <connections>
                                     <action selector="OAuthForCode:" destination="2Fh-zG-2iM" eventType="touchUpInside" id="mzN-Fo-B67"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wO8-N9-PEd">
-                                <rect key="frame" x="173" y="204" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="204" width="30" height="30"/>
                                 <state key="normal" title="GIF"/>
                                 <connections>
                                     <action selector="shareGIF:" destination="2Fh-zG-2iM" eventType="touchUpInside" id="7Ze-ed-bfb"/>
@@ -305,14 +304,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dng-YW-vJ4">
-                                <rect key="frame" x="172" y="104" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="104" width="30" height="30"/>
                                 <state key="normal" title="Text"/>
                                 <connections>
                                     <action selector="shareText:" destination="KnQ-vr-BqU" eventType="touchUpInside" id="bMZ-Nc-7Lb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvp-ds-PwN">
-                                <rect key="frame" x="166" y="142" width="42" height="30"/>
+                                <rect key="frame" x="166.5" y="142" width="42" height="30"/>
                                 <state key="normal" title="Image"/>
                                 <connections>
                                     <action selector="shareImage:" destination="KnQ-vr-BqU" eventType="touchUpInside" id="ceh-lJ-ft5"/>
@@ -397,77 +396,6 @@
             </objects>
             <point key="canvasLocation" x="1548" y="1186"/>
         </scene>
-        <!--Alipay-->
-        <scene sceneID="liQ-bp-yTB">
-            <objects>
-                <viewController id="enf-fb-fjR" customClass="AlipayViewController" customModule="China" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Ei-Fo-sDx"/>
-                        <viewControllerLayoutGuide type="bottom" id="kjq-dE-FQn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zQL-2N-wfU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rib-Zt-LiP">
-                                <rect key="frame" x="150" y="164" width="75" height="30"/>
-                                <state key="normal" title="Alipay Text"/>
-                                <connections>
-                                    <action selector="shareTextToAlipay:" destination="enf-fb-fjR" eventType="touchUpInside" id="9yU-Jv-L9Z"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewo-ab-eI8">
-                                <rect key="frame" x="143.5" y="224" width="88" height="30"/>
-                                <state key="normal" title="Alipay Image"/>
-                                <connections>
-                                    <action selector="shareImageToAlipay:" destination="enf-fb-fjR" eventType="touchUpInside" id="2Ag-tS-muB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci4-1i-Sib">
-                                <rect key="frame" x="150" y="284" width="75" height="30"/>
-                                <state key="normal" title="Alipay URL"/>
-                                <connections>
-                                    <action selector="shareURLToAlipay:" destination="enf-fb-fjR" eventType="touchUpInside" id="gad-oW-rUC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orj-LM-NKS">
-                                <rect key="frame" x="152" y="487" width="71" height="30"/>
-                                <state key="normal" title="Alipay Pay"/>
-                                <connections>
-                                    <action selector="pay:" destination="enf-fb-fjR" eventType="touchUpInside" id="g0R-Pi-FGM"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wdu-6N-jtH">
-                                <rect key="frame" x="122" y="394" width="131" height="29"/>
-                                <segments>
-                                    <segment title="Friends"/>
-                                    <segment title="Timeline"/>
-                                </segments>
-                            </segmentedControl>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ewo-ab-eI8" firstAttribute="top" secondItem="rib-Zt-LiP" secondAttribute="bottom" constant="30" id="6G9-4q-GA9"/>
-                            <constraint firstItem="Wdu-6N-jtH" firstAttribute="top" secondItem="ci4-1i-Sib" secondAttribute="bottom" constant="80" id="EFu-Ut-yHu"/>
-                            <constraint firstItem="rib-Zt-LiP" firstAttribute="top" secondItem="4Ei-Fo-sDx" secondAttribute="bottom" constant="100" id="JsV-8r-sGN"/>
-                            <constraint firstItem="rib-Zt-LiP" firstAttribute="centerX" secondItem="zQL-2N-wfU" secondAttribute="centerX" id="Rx5-jf-lIb"/>
-                            <constraint firstItem="orj-LM-NKS" firstAttribute="centerX" secondItem="rib-Zt-LiP" secondAttribute="centerX" id="TyM-1d-PZh"/>
-                            <constraint firstItem="orj-LM-NKS" firstAttribute="top" secondItem="Wdu-6N-jtH" secondAttribute="bottom" constant="65" id="YMR-gx-8OX"/>
-                            <constraint firstItem="ci4-1i-Sib" firstAttribute="top" secondItem="ewo-ab-eI8" secondAttribute="bottom" constant="30" id="e1z-Qu-ZCm"/>
-                            <constraint firstItem="Wdu-6N-jtH" firstAttribute="centerX" secondItem="rib-Zt-LiP" secondAttribute="centerX" id="mwx-3z-g4D"/>
-                            <constraint firstItem="ci4-1i-Sib" firstAttribute="centerX" secondItem="rib-Zt-LiP" secondAttribute="centerX" id="p3l-RP-XYE"/>
-                            <constraint firstItem="ewo-ab-eI8" firstAttribute="centerX" secondItem="rib-Zt-LiP" secondAttribute="centerX" id="xS1-41-ysW"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Alipay" id="3jX-Mz-Luh"/>
-                    <connections>
-                        <outlet property="segmentedControl" destination="Wdu-6N-jtH" id="tM8-Cd-Xxx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YtH-7L-hcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1580" y="-1036"/>
-        </scene>
         <!--MonkeyKing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -509,7 +437,6 @@
                         <segue destination="he5-GB-Amc" kind="show" identifier="QQ" id="2c0-4X-8gv"/>
                         <segue destination="KaI-44-6m0" kind="show" identifier="System" id="wNz-79-HiF"/>
                         <segue destination="KHj-bA-9ar" kind="show" identifier="Pocket" id="R4a-KY-4sF"/>
-                        <segue destination="enf-fb-fjR" kind="show" identifier="Alipay" id="Ijh-n1-NmS"/>
                         <segue destination="KnQ-vr-BqU" kind="show" identifier="Twitter" id="Z8p-OW-eua"/>
                     </connections>
                 </viewController>

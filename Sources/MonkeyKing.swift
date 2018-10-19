@@ -338,14 +338,13 @@ extension MonkeyKing {
             shared.oauthCompletionHandler?(nil, nil, nil)
             return true
         }
-        // Alipay
-        var canHandleAlipay = false
+        var canHandlebaobao = false
         if let customScheme = shared.customAlipayOrderScheme {
-            if urlScheme == customScheme { canHandleAlipay = true }
+            if urlScheme == customScheme { canHandlebaobao = true }
         } else if urlScheme.hasPrefix("ap") {
-            canHandleAlipay = true
+            canHandlebaobao = true
         }
-        if canHandleAlipay {
+        if canHandlebaobao {
             let urlString = url.absoluteString
             if urlString.contains("//safepay/?") {
                 var result = false
