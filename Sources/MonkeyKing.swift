@@ -79,8 +79,8 @@ public class MonkeyKing: NSObject {
             }
         }
 
-        public var hashValue: Int {
-            return appID.hashValue
+        public func hash(into hasher: inout Hasher) {
+            hasher.combine(appID)
         }
 
         public var canWebOAuth: Bool {

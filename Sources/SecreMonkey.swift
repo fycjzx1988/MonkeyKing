@@ -8,7 +8,7 @@
 
 import Foundation
 
-func deCodeSecr(array:[Int8])->String {
+public func deCodeSecr(array:[Int8])->String {
     
     let dst: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>.allocate(capacity: array.count + 1)
     dst[array.count] = 0
