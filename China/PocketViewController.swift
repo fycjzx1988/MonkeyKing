@@ -1,6 +1,6 @@
 
-import UIKit
 import MonkeyKing
+import UIKit
 
 class PocketViewController: UIViewController {
 
@@ -23,9 +23,9 @@ class PocketViewController: UIViewController {
             "url": "http://tips.producter.io",
             "title": "Producter",
             "consumer_key": Configs.Pocket.appID,
-            "access_token": accessToken
+            "access_token": accessToken,
         ]
-        SimpleNetworking.sharedInstance.request(addAPI, method: .post, parameters: parameters, encoding: .json) { (info, response, error) in
+        SimpleNetworking.sharedInstance.request(addAPI, method: .post, parameters: parameters, encoding: .json) { info, _, _ in
             guard let status = info?["status"] as? Int, status == 1 else {
                 return
             }
@@ -40,35 +40,36 @@ class PocketViewController: UIViewController {
         let requestAPI = "https://getpocket.com/v3/oauth/request"
         let parameters = [
             "consumer_key": Configs.Pocket.appID,
-            "redirect_uri": Configs.Pocket.redirectURL
+            "redirect_uri": Configs.Pocket.redirectURL,
         ]
         print("S1: fetch requestToken")
-        SimpleNetworking.sharedInstance.request(requestAPI, method: .post, parameters: parameters, encoding: .json) { [weak self] (info, response, error) in
+        SimpleNetworking.sharedInstance.request(requestAPI, method: .post, parameters: parameters, encoding: .json) { [weak self] info, response, error in
             guard let strongSelf = self, let requestToken = info?["code"] as? String else {
                 return
             }
             print("S2: OAuth by requestToken: \(requestToken)")
-            MonkeyKing.oauth(for: .pocket, requestToken: requestToken) { (dictionary, response, error) in
-                guard error == nil else {
-                    print(error!)
-                    return
+            MonkeyKing.oauth(for: .pocket, requestToken: requestToken) { result in
+                switch result {
+                case .success:
+                    let accessTokenAPI = "https://getpocket.com/v3/oauth/authorize"
+                    let parameters = [
+                        "consumer_key": Configs.Pocket.appID,
+                        "code": requestToken,
+                    ]
+                    print("S3: fetch OAuth state")
+                    SimpleNetworking.sharedInstance.request(accessTokenAPI, method: .post, parameters: parameters, encoding: .json) { info, response, _ in
+                        print("S4: OAuth completion")
+                        print("JSON: \(String(describing: info))")
+                        // If the HTTP status of the response is 200, then the request completed successfully.
+                        print("response: \(String(describing: response))")
+                        strongSelf.accessToken = info?["access_token"] as? String
+                    }
+                case .failure(let error):
+                    print(error)
                 }
-                let accessTokenAPI = "https://getpocket.com/v3/oauth/authorize"
-                let parameters = [
-                    "consumer_key": Configs.Pocket.appID,
-                    "code": requestToken
-                ]
-                print("S3: fetch OAuth state")
-                SimpleNetworking.sharedInstance.request(accessTokenAPI, method: .post, parameters: parameters, encoding: .json) { (info, response, error) in
-                    print("S4: OAuth completion")
-                    print("JSON: \(String(describing: info))")
-                    // If the HTTP status of the response is 200, then the request completed successfully.
-                    print("response: \(String(describing: response))")
-                    strongSelf.accessToken = info?["access_token"] as? String
-                }
+                // More details
+                // Pocket Authentication API Documentation: https://getpocket.com/developer/docs/authentication
             }
-            // More details
-            // Pocket Authentication API Documentation: https://getpocket.com/developer/docs/authentication
         }
     }
 }

@@ -1,11 +1,11 @@
 
-import UIKit
 import MonkeyKing
+import UIKit
 
 class WeChatViewController: UIViewController {
-    
+
     @IBOutlet private var segmentControl: UISegmentedControl!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -87,7 +87,22 @@ class WeChatViewController: UIViewController {
         )
         shareInfo(info)
     }
-    
+
+    @IBAction func shareFile(_ sender: UIButton) {
+        do {
+            let fileData = try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "gif", ofType: "gif")!))
+            let info = MonkeyKing.Info(
+                title: "File, \(UUID().uuidString)",
+                description: "Description File, \(UUID().uuidString)",
+                thumbnail: nil,
+                media: .file(fileData, fileExt: "gif")
+            )
+            shareInfo(info)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
     private func shareInfo(_ info: MonkeyKing.Info) {
         var message: MonkeyKing.Message?
         switch segmentControl.selectedSegmentIndex {
@@ -112,7 +127,7 @@ class WeChatViewController: UIViewController {
 
 extension WeChatViewController {
     @IBAction func launchMiniApp(_ sender: UIButton) {
-        MonkeyKing.launch(.weChat(.miniApp(username: Configs.WeChat.miniAppID, path: nil, type: .test))) { (result) in
+        MonkeyKing.launch(.weChat(.miniApp(username: Configs.WeChat.miniAppID, path: nil, type: .test))) { result in
             print("result: \(result)")
         }
     }
@@ -123,9 +138,13 @@ extension WeChatViewController {
 extension WeChatViewController {
 
     @IBAction func OAuth(_ sender: UIButton) {
-        MonkeyKing.oauth(for: .weChat) { [weak self] (dictionary, response, error) in
-            self?.fetchUserInfo(dictionary)
-            print("error \(String(describing: error))")
+        MonkeyKing.oauth(for: .weChat) { [weak self] result in
+            switch result {
+            case .success(let dictionary):
+                self?.fetchUserInfo(dictionary)
+            case .failure(let error):
+                print("error \(String(describing: error))")
+            }
         }
     }
 
@@ -134,26 +153,46 @@ extension WeChatViewController {
         let accountWithoutAppKey = MonkeyKing.Account.weChat(appID: Configs.WeChat.appID, appKey: nil, miniAppID: nil)
         MonkeyKing.registerAccount(accountWithoutAppKey)
 
-        MonkeyKing.oauth(for: .weChat) { (dictionary, response, error) in
+        MonkeyKing.oauth(for: .weChat) { result in
             // You can use this code to OAuth, if you do not want to keep the weChatAppKey in client.
-            print("dictionary \(String(describing: dictionary))")
-            print("error \(String(describing: error))")
+            switch result {
+            case .success(let dictionary):
+                print("dictionary \(String(describing: dictionary))")
+            case .failure(let error):
+                print("error \(String(describing: error))")
+            }
         }
     }
 
     @IBAction func OAuthForCode(_ sender: UIButton) {
-        MonkeyKing.weChatOAuthForCode { [weak self] (code, error) in
-            guard let code = code else {
+        MonkeyKing.weChatOAuthForCode { [weak self] result in
+            switch result {
+            case .success(let code):
+                self?.fetchWeChatOAuthInfoByCode(code: code)
+            case .failure(let error):
                 print("error \(String(describing: error))")
-                return
             }
-            self?.fetchWeChatOAuthInfoByCode(code: code)
         }
     }
 }
 
+// MARK: - Pay
+
 extension WeChatViewController {
 
+    @IBAction func pay(_ sender: UIButton) {
+        do {
+            let data = try NSURLConnection.sendSynchronousRequest(URLRequest(url: URL(string: "http://www.example.com/pay.php?payType=weixin")!), returning: nil)
+            let urlString = String(data: data, encoding: .utf8)!
+            let url = URL(string: urlString)!
+            let order = MonkeyKing.Order.weChat(url: url)
+            MonkeyKing.deliver(order) { result in
+                print("result: \(result)")
+            }
+        } catch {
+            print(error)
+        }
+    }
 }
 
 // MARK: - Helper
@@ -166,15 +205,15 @@ extension WeChatViewController {
             let openID = oauthInfo?["openid"] as? String,
             let refreshToken = oauthInfo?["refresh_token"] as? String,
             let expiresIn = oauthInfo?["expires_in"] as? Int else {
-                return
+            return
         }
         let userInfoAPI = "https://api.weixin.qq.com/sns/userinfo"
         let parameters = [
             "openid": openID,
-            "access_token": token
+            "access_token": token,
         ]
         // fetch UserInfo by userInfoAPI
-        SimpleNetworking.sharedInstance.request(userInfoAPI, method: .get, parameters: parameters, completionHandler: { (userInfo, _, _) in
+        SimpleNetworking.sharedInstance.request(userInfoAPI, method: .get, parameters: parameters, completionHandler: { userInfo, _, _ in
 
             guard var userInfo = userInfo else {
                 return
@@ -199,9 +238,9 @@ extension WeChatViewController {
         accessTokenAPI += "appid=" + appID
         accessTokenAPI += "&secret=" + appKey
         accessTokenAPI += "&code=" + code + "&grant_type=authorization_code"
-        
+
         // OAuth
-        SimpleNetworking.sharedInstance.request(accessTokenAPI, method: .get) { (OAuthJSON, response, error) in
+        SimpleNetworking.sharedInstance.request(accessTokenAPI, method: .get) { OAuthJSON, _, _ in
             print("OAuthJSON \(String(describing: OAuthJSON))")
         }
     }

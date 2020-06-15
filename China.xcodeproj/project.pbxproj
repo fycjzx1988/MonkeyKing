@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07211C7323B8D1AA0068A7C0 /* MonkeyKing+handleOpenURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07211C7223B8D1AA0068A7C0 /* MonkeyKing+handleOpenURL.swift */; };
+		07211C7723B8D2FD0068A7C0 /* MonkeyKing+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07211C7623B8D2FD0068A7C0 /* MonkeyKing+Pay.swift */; };
+		07211C7923B8D37E0068A7C0 /* MonkeyKing+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07211C7823B8D37E0068A7C0 /* MonkeyKing+Message.swift */; };
+		07211C7B23B8D3A60068A7C0 /* MonkeyKing+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07211C7A23B8D3A60068A7C0 /* MonkeyKing+OAuth.swift */; };
+		07211C7D23B8D40D0068A7C0 /* MonkeyKing+Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07211C7C23B8D40D0068A7C0 /* MonkeyKing+Program.swift */; };
+		07211C7F23B8D44C0068A7C0 /* MonkeyKing+OpenURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07211C7E23B8D44C0068A7C0 /* MonkeyKing+OpenURL.swift */; };
+		07211C8123B8EAE80068A7C0 /* MonkeyKing+SupportedPlatformCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07211C8023B8EAE80068A7C0 /* MonkeyKing+SupportedPlatformCapable.swift */; };
+		10CDDF46237A8588005E8DE7 /* MonkeyKing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CDDF3F237A8588005E8DE7 /* MonkeyKing.swift */; };
+		10CDDF47237A8588005E8DE7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CDDF40237A8588005E8DE7 /* Networking.swift */; };
+		10CDDF48237A8588005E8DE7 /* MonkeyKing+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CDDF41237A8588005E8DE7 /* MonkeyKing+WebView.swift */; };
+		10CDDF49237A8588005E8DE7 /* AnyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CDDF42237A8588005E8DE7 /* AnyActivity.swift */; };
+		10CDDF4A237A8588005E8DE7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CDDF43237A8588005E8DE7 /* Helpers.swift */; };
+		10CDDF4B237A8588005E8DE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CDDF44237A8588005E8DE7 /* Extensions.swift */; };
+		10CDDF4C237A8588005E8DE7 /* MonkeyKing+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CDDF45237A8588005E8DE7 /* MonkeyKing+Error.swift */; };
 		3F159F301C056B1D00BCB39B /* PocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F159F2F1C056B1D00BCB39B /* PocketViewController.swift */; };
 		3F16EAF01BF4D1DB005B1799 /* SimpleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16EAEF1BF4D1DB005B1799 /* SimpleNetworking.swift */; };
 		3F62B3661BB6ACBB00AABD3C /* WeChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62B3651BB6ACBB00AABD3C /* WeChatViewController.swift */; };
 		3F62B3681BB6ACCE00AABD3C /* WeiboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62B3671BB6ACCE00AABD3C /* WeiboViewController.swift */; };
 		3F62B36A1BB6ACD800AABD3C /* QQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62B3691BB6ACD800AABD3C /* QQViewController.swift */; };
 		3F62B36C1BB6ACE500AABD3C /* SystemShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62B36B1BB6ACE500AABD3C /* SystemShareViewController.swift */; };
+		3F7609431C57B47300FBCB20 /* AlipayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7609421C57B47300FBCB20 /* AlipayViewController.swift */; };
 		3F87FE691C1D3E4F000D2994 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F87FE681C1D3E4F000D2994 /* Configs.swift */; };
-		5067D5401D6D814600D3C010 /* AnyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5067D53D1D6D814600D3C010 /* AnyActivity.swift */; };
-		5067D5411D6D814600D3C010 /* MonkeyKing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5067D53E1D6D814600D3C010 /* MonkeyKing.swift */; };
-		5067D5421D6D814600D3C010 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5067D53F1D6D814600D3C010 /* Networking.swift */; };
 		50FBA6B91BA2AFAE00E69BB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FBA6B81BA2AFAE00E69BB3 /* AppDelegate.swift */; };
 		50FBA6BB1BA2AFAE00E69BB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FBA6BA1BA2AFAE00E69BB3 /* ViewController.swift */; };
 		50FBA6BE1BA2AFAE00E69BB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FBA6BC1BA2AFAE00E69BB3 /* Main.storyboard */; };
@@ -25,12 +37,9 @@
 		50FBA6D21BA2BBE900E69BB3 /* MonkeyKing.h in Headers */ = {isa = PBXBuildFile; fileRef = 50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50FBA6D61BA2BBE900E69BB3 /* MonkeyKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */; };
 		50FBA6D71BA2BBE900E69BB3 /* MonkeyKing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		53AE7AEF2179E5AE005BA0C0 /* SecreMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE7AEE2179E5AE005BA0C0 /* SecreMonkey.swift */; };
+		534EEF62249752A000B104F4 /* SecreMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EEF61249752A000B104F4 /* SecreMonkey.swift */; };
+		7840AF1D1C63167C00AD5256 /* pay.php in Resources */ = {isa = PBXBuildFile; fileRef = 7840AF1C1C63167C00AD5256 /* pay.php */; };
 		955654EB1EB89D5D009444FF /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955654EA1EB89D5D009444FF /* TwitterViewController.swift */; };
-		EDA620311F28F747007DF1DF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6202D1F28F747007DF1DF /* Extensions.swift */; };
-		EDA620321F28F747007DF1DF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6202E1F28F747007DF1DF /* Helpers.swift */; };
-		EDA620331F28F747007DF1DF /* MonkeyKing+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6202F1F28F747007DF1DF /* MonkeyKing+WebView.swift */; };
-		EDA620341F28F747007DF1DF /* MonkeyKing+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA620301F28F747007DF1DF /* MonkeyKing+Error.swift */; };
 		EDD0A28C213E6F7B003EB202 /* WeChatActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0A28A213E6F7B003EB202 /* WeChatActivity.swift */; };
 		EDD0A28D213E6F7B003EB202 /* QQActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0A28B213E6F7B003EB202 /* QQActivity.swift */; };
 		EDD0A28F213E6FB2003EB202 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = EDD0A28E213E6FB2003EB202 /* gif.gif */; };
@@ -61,16 +70,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07211C7223B8D1AA0068A7C0 /* MonkeyKing+handleOpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+handleOpenURL.swift"; path = "Sources/MonkeyKing/MonkeyKing+handleOpenURL.swift"; sourceTree = SOURCE_ROOT; };
+		07211C7623B8D2FD0068A7C0 /* MonkeyKing+Pay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+Pay.swift"; path = "Sources/MonkeyKing/MonkeyKing+Pay.swift"; sourceTree = SOURCE_ROOT; };
+		07211C7823B8D37E0068A7C0 /* MonkeyKing+Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+Message.swift"; path = "Sources/MonkeyKing/MonkeyKing+Message.swift"; sourceTree = SOURCE_ROOT; };
+		07211C7A23B8D3A60068A7C0 /* MonkeyKing+OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+OAuth.swift"; path = "Sources/MonkeyKing/MonkeyKing+OAuth.swift"; sourceTree = SOURCE_ROOT; };
+		07211C7C23B8D40D0068A7C0 /* MonkeyKing+Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+Program.swift"; path = "Sources/MonkeyKing/MonkeyKing+Program.swift"; sourceTree = SOURCE_ROOT; };
+		07211C7E23B8D44C0068A7C0 /* MonkeyKing+OpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+OpenURL.swift"; path = "Sources/MonkeyKing/MonkeyKing+OpenURL.swift"; sourceTree = SOURCE_ROOT; };
+		07211C8023B8EAE80068A7C0 /* MonkeyKing+SupportedPlatformCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+SupportedPlatformCapable.swift"; path = "Sources/MonkeyKing/MonkeyKing+SupportedPlatformCapable.swift"; sourceTree = SOURCE_ROOT; };
+		10CDDF3F237A8588005E8DE7 /* MonkeyKing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonkeyKing.swift; path = Sources/MonkeyKing/MonkeyKing.swift; sourceTree = SOURCE_ROOT; };
+		10CDDF40237A8588005E8DE7 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Sources/MonkeyKing/Networking.swift; sourceTree = SOURCE_ROOT; };
+		10CDDF41237A8588005E8DE7 /* MonkeyKing+WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+WebView.swift"; path = "Sources/MonkeyKing/MonkeyKing+WebView.swift"; sourceTree = SOURCE_ROOT; };
+		10CDDF42237A8588005E8DE7 /* AnyActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnyActivity.swift; path = Sources/MonkeyKing/AnyActivity.swift; sourceTree = SOURCE_ROOT; };
+		10CDDF43237A8588005E8DE7 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/MonkeyKing/Helpers.swift; sourceTree = SOURCE_ROOT; };
+		10CDDF44237A8588005E8DE7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/MonkeyKing/Extensions.swift; sourceTree = SOURCE_ROOT; };
+		10CDDF45237A8588005E8DE7 /* MonkeyKing+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+Error.swift"; path = "Sources/MonkeyKing/MonkeyKing+Error.swift"; sourceTree = SOURCE_ROOT; };
 		3F159F2F1C056B1D00BCB39B /* PocketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketViewController.swift; sourceTree = "<group>"; };
 		3F16EAEF1BF4D1DB005B1799 /* SimpleNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworking.swift; sourceTree = "<group>"; };
 		3F62B3651BB6ACBB00AABD3C /* WeChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatViewController.swift; sourceTree = "<group>"; };
 		3F62B3671BB6ACCE00AABD3C /* WeiboViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiboViewController.swift; sourceTree = "<group>"; };
 		3F62B3691BB6ACD800AABD3C /* QQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQViewController.swift; sourceTree = "<group>"; };
 		3F62B36B1BB6ACE500AABD3C /* SystemShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemShareViewController.swift; sourceTree = "<group>"; };
+		3F7609421C57B47300FBCB20 /* AlipayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlipayViewController.swift; sourceTree = "<group>"; };
 		3F87FE681C1D3E4F000D2994 /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
-		5067D53D1D6D814600D3C010 /* AnyActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnyActivity.swift; path = Sources/AnyActivity.swift; sourceTree = SOURCE_ROOT; };
-		5067D53E1D6D814600D3C010 /* MonkeyKing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonkeyKing.swift; path = Sources/MonkeyKing.swift; sourceTree = SOURCE_ROOT; };
-		5067D53F1D6D814600D3C010 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Sources/Networking.swift; sourceTree = SOURCE_ROOT; };
 		50FBA6B51BA2AFAD00E69BB3 /* China.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = China.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FBA6B81BA2AFAE00E69BB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50FBA6BA1BA2AFAE00E69BB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,12 +102,9 @@
 		50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MonkeyKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonkeyKing.h; sourceTree = "<group>"; };
 		50FBA6D31BA2BBE900E69BB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53AE7AEE2179E5AE005BA0C0 /* SecreMonkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecreMonkey.swift; path = Sources/SecreMonkey.swift; sourceTree = SOURCE_ROOT; };
+		534EEF61249752A000B104F4 /* SecreMonkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecreMonkey.swift; sourceTree = "<group>"; };
+		7840AF1C1C63167C00AD5256 /* pay.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = pay.php; sourceTree = "<group>"; };
 		955654EA1EB89D5D009444FF /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
-		EDA6202D1F28F747007DF1DF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = SOURCE_ROOT; };
-		EDA6202E1F28F747007DF1DF /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/Helpers.swift; sourceTree = SOURCE_ROOT; };
-		EDA6202F1F28F747007DF1DF /* MonkeyKing+WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+WebView.swift"; path = "Sources/MonkeyKing+WebView.swift"; sourceTree = SOURCE_ROOT; };
-		EDA620301F28F747007DF1DF /* MonkeyKing+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MonkeyKing+Error.swift"; path = "Sources/MonkeyKing+Error.swift"; sourceTree = SOURCE_ROOT; };
 		EDD0A28A213E6F7B003EB202 /* WeChatActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatActivity.swift; sourceTree = "<group>"; };
 		EDD0A28B213E6F7B003EB202 /* QQActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQActivity.swift; sourceTree = "<group>"; };
 		EDD0A28E213E6FB2003EB202 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
@@ -132,22 +150,24 @@
 		50FBA6B71BA2AFAD00E69BB3 /* China */ = {
 			isa = PBXGroup;
 			children = (
+				7840AF1C1C63167C00AD5256 /* pay.php */,
+				50FBA6C41BA2AFAE00E69BB3 /* Info.plist */,
+				3F7609421C57B47300FBCB20 /* AlipayViewController.swift */,
 				50FBA6B81BA2AFAE00E69BB3 /* AppDelegate.swift */,
 				3F87FE681C1D3E4F000D2994 /* Configs.swift */,
+				3F159F2F1C056B1D00BCB39B /* PocketViewController.swift */,
+				3F62B3691BB6ACD800AABD3C /* QQViewController.swift */,
+				3F16EAEF1BF4D1DB005B1799 /* SimpleNetworking.swift */,
+				3F62B36B1BB6ACE500AABD3C /* SystemShareViewController.swift */,
+				955654EA1EB89D5D009444FF /* TwitterViewController.swift */,
 				50FBA6BA1BA2AFAE00E69BB3 /* ViewController.swift */,
 				3F62B3651BB6ACBB00AABD3C /* WeChatViewController.swift */,
 				3F62B3671BB6ACCE00AABD3C /* WeiboViewController.swift */,
-				3F62B3691BB6ACD800AABD3C /* QQViewController.swift */,
-				955654EA1EB89D5D009444FF /* TwitterViewController.swift */,
-				3F159F2F1C056B1D00BCB39B /* PocketViewController.swift */,
-				3F62B36B1BB6ACE500AABD3C /* SystemShareViewController.swift */,
-				3F16EAEF1BF4D1DB005B1799 /* SimpleNetworking.swift */,
-				50FBA6E21BA56E2200E69BB3 /* Activities */,
-				EDD0A289213E6F55003EB202 /* Resources */,
-				50FBA6BC1BA2AFAE00E69BB3 /* Main.storyboard */,
 				50FBA6BF1BA2AFAE00E69BB3 /* Assets.xcassets */,
+				50FBA6E21BA56E2200E69BB3 /* Activities */,
 				50FBA6C11BA2AFAE00E69BB3 /* LaunchScreen.storyboard */,
-				50FBA6C41BA2AFAE00E69BB3 /* Info.plist */,
+				50FBA6BC1BA2AFAE00E69BB3 /* Main.storyboard */,
+				EDD0A289213E6F55003EB202 /* Resources */,
 			);
 			path = China;
 			sourceTree = "<group>";
@@ -156,15 +176,22 @@
 			isa = PBXGroup;
 			children = (
 				50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */,
-				5067D53E1D6D814600D3C010 /* MonkeyKing.swift */,
-				EDA620301F28F747007DF1DF /* MonkeyKing+Error.swift */,
-				EDA6202F1F28F747007DF1DF /* MonkeyKing+WebView.swift */,
-				5067D53D1D6D814600D3C010 /* AnyActivity.swift */,
-				5067D53F1D6D814600D3C010 /* Networking.swift */,
-				53AE7AEE2179E5AE005BA0C0 /* SecreMonkey.swift */,
-				EDA6202D1F28F747007DF1DF /* Extensions.swift */,
-				EDA6202E1F28F747007DF1DF /* Helpers.swift */,
 				50FBA6D31BA2BBE900E69BB3 /* Info.plist */,
+				10CDDF42237A8588005E8DE7 /* AnyActivity.swift */,
+				534EEF61249752A000B104F4 /* SecreMonkey.swift */,
+				10CDDF44237A8588005E8DE7 /* Extensions.swift */,
+				10CDDF43237A8588005E8DE7 /* Helpers.swift */,
+				10CDDF3F237A8588005E8DE7 /* MonkeyKing.swift */,
+				10CDDF45237A8588005E8DE7 /* MonkeyKing+Error.swift */,
+				07211C7223B8D1AA0068A7C0 /* MonkeyKing+handleOpenURL.swift */,
+				07211C7823B8D37E0068A7C0 /* MonkeyKing+Message.swift */,
+				07211C7A23B8D3A60068A7C0 /* MonkeyKing+OAuth.swift */,
+				07211C7E23B8D44C0068A7C0 /* MonkeyKing+OpenURL.swift */,
+				07211C7623B8D2FD0068A7C0 /* MonkeyKing+Pay.swift */,
+				07211C7C23B8D40D0068A7C0 /* MonkeyKing+Program.swift */,
+				07211C8023B8EAE80068A7C0 /* MonkeyKing+SupportedPlatformCapable.swift */,
+				10CDDF41237A8588005E8DE7 /* MonkeyKing+WebView.swift */,
+				10CDDF40237A8588005E8DE7 /* Networking.swift */,
 			);
 			path = MonkeyKing;
 			sourceTree = "<group>";
@@ -244,26 +271,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = nixWork;
 				TargetAttributes = {
 					50FBA6B41BA2AFAD00E69BB3 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					50FBA6CE1BA2BBE900E69BB3 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
 			buildConfigurationList = 50FBA6B01BA2AFAD00E69BB3 /* Build configuration list for PBXProject "China" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -284,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FBA6C31BA2AFAE00E69BB3 /* LaunchScreen.storyboard in Resources */,
+				7840AF1D1C63167C00AD5256 /* pay.php in Resources */,
 				50FBA6C01BA2AFAE00E69BB3 /* Assets.xcassets in Resources */,
 				50FBA6BE1BA2AFAE00E69BB3 /* Main.storyboard in Resources */,
 				EDD0A28F213E6FB2003EB202 /* gif.gif in Resources */,
@@ -309,6 +336,7 @@
 				3F62B3661BB6ACBB00AABD3C /* WeChatViewController.swift in Sources */,
 				3F16EAF01BF4D1DB005B1799 /* SimpleNetworking.swift in Sources */,
 				3F62B36A1BB6ACD800AABD3C /* QQViewController.swift in Sources */,
+				3F7609431C57B47300FBCB20 /* AlipayViewController.swift in Sources */,
 				3F62B3681BB6ACCE00AABD3C /* WeiboViewController.swift in Sources */,
 				50FBA6BB1BA2AFAE00E69BB3 /* ViewController.swift in Sources */,
 				955654EB1EB89D5D009444FF /* TwitterViewController.swift in Sources */,
@@ -323,14 +351,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5067D5421D6D814600D3C010 /* Networking.swift in Sources */,
-				53AE7AEF2179E5AE005BA0C0 /* SecreMonkey.swift in Sources */,
-				5067D5401D6D814600D3C010 /* AnyActivity.swift in Sources */,
-				5067D5411D6D814600D3C010 /* MonkeyKing.swift in Sources */,
-				EDA620331F28F747007DF1DF /* MonkeyKing+WebView.swift in Sources */,
-				EDA620341F28F747007DF1DF /* MonkeyKing+Error.swift in Sources */,
-				EDA620321F28F747007DF1DF /* Helpers.swift in Sources */,
-				EDA620311F28F747007DF1DF /* Extensions.swift in Sources */,
+				10CDDF48237A8588005E8DE7 /* MonkeyKing+WebView.swift in Sources */,
+				07211C7F23B8D44C0068A7C0 /* MonkeyKing+OpenURL.swift in Sources */,
+				10CDDF4C237A8588005E8DE7 /* MonkeyKing+Error.swift in Sources */,
+				10CDDF4B237A8588005E8DE7 /* Extensions.swift in Sources */,
+				07211C7923B8D37E0068A7C0 /* MonkeyKing+Message.swift in Sources */,
+				10CDDF49237A8588005E8DE7 /* AnyActivity.swift in Sources */,
+				07211C7723B8D2FD0068A7C0 /* MonkeyKing+Pay.swift in Sources */,
+				10CDDF46237A8588005E8DE7 /* MonkeyKing.swift in Sources */,
+				10CDDF4A237A8588005E8DE7 /* Helpers.swift in Sources */,
+				10CDDF47237A8588005E8DE7 /* Networking.swift in Sources */,
+				534EEF62249752A000B104F4 /* SecreMonkey.swift in Sources */,
+				07211C8123B8EAE80068A7C0 /* MonkeyKing+SupportedPlatformCapable.swift in Sources */,
+				07211C7B23B8D3A60068A7C0 /* MonkeyKing+OAuth.swift in Sources */,
+				07211C7D23B8D40D0068A7C0 /* MonkeyKing+Program.swift in Sources */,
+				07211C7323B8D1AA0068A7C0 /* MonkeyKing+handleOpenURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -426,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -481,13 +518,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = China/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.16.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nixWork.China;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -499,13 +537,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = China/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.16.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nixWork.China;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -513,9 +552,10 @@
 		50FBA6D81BA2BBE900E69BB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 43;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -524,12 +564,12 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.16.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nixWork.MonkeyKing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -538,9 +578,10 @@
 		50FBA6D91BA2BBE900E69BB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 43;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -549,11 +590,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.16.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nixWork.MonkeyKing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
