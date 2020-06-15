@@ -541,7 +541,7 @@ extension MonkeyKing {
                 fatalError("web Weibo not supports Mini App type")
             }
         case .alipay(let type):
-            let dictionary = createAlipayMessageDictionary(withScene: type.scene, info: type.info, appID: appID)
+            let dictionary = createBaoBaoMessageDictionary(withScene: type.scene, info: type.info, appID: appID)
             guard let data = try? PropertyListSerialization.data(fromPropertyList: dictionary, format: .xml, options: .init()) else {
                 completionHandler(.failure(.sdk(.serializeFailed)))
                 return

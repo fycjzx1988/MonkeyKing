@@ -74,7 +74,7 @@ extension MonkeyKing {
         }
     }
 
-    class func createAlipayMessageDictionary(withScene scene: NSNumber, info: Info, appID: String) -> [String: Any] {
+    class func createBaoBaoMessageDictionary(withScene scene: NSNumber, info: Info, appID: String) -> [String: Any] {
         enum BaobaoMessageType {
             case text
             case image(UIImage)
