@@ -37,7 +37,7 @@
 		50FBA6D21BA2BBE900E69BB3 /* MonkeyKing.h in Headers */ = {isa = PBXBuildFile; fileRef = 50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50FBA6D61BA2BBE900E69BB3 /* MonkeyKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */; };
 		50FBA6D71BA2BBE900E69BB3 /* MonkeyKing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		534EEF62249752A000B104F4 /* SecreMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EEF61249752A000B104F4 /* SecreMonkey.swift */; };
+		534EF4722497647D00B104F4 /* SecreMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EF4712497647D00B104F4 /* SecreMonkey.swift */; };
 		7840AF1D1C63167C00AD5256 /* pay.php in Resources */ = {isa = PBXBuildFile; fileRef = 7840AF1C1C63167C00AD5256 /* pay.php */; };
 		955654EB1EB89D5D009444FF /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955654EA1EB89D5D009444FF /* TwitterViewController.swift */; };
 		EDD0A28C213E6F7B003EB202 /* WeChatActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0A28A213E6F7B003EB202 /* WeChatActivity.swift */; };
@@ -102,7 +102,7 @@
 		50FBA6CF1BA2BBE900E69BB3 /* MonkeyKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MonkeyKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonkeyKing.h; sourceTree = "<group>"; };
 		50FBA6D31BA2BBE900E69BB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		534EEF61249752A000B104F4 /* SecreMonkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecreMonkey.swift; sourceTree = "<group>"; };
+		534EF4712497647D00B104F4 /* SecreMonkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecreMonkey.swift; path = Sources/MonkeyKing/SecreMonkey.swift; sourceTree = SOURCE_ROOT; };
 		7840AF1C1C63167C00AD5256 /* pay.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = pay.php; sourceTree = "<group>"; };
 		955654EA1EB89D5D009444FF /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		EDD0A28A213E6F7B003EB202 /* WeChatActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatActivity.swift; sourceTree = "<group>"; };
@@ -178,10 +178,10 @@
 				50FBA6D11BA2BBE900E69BB3 /* MonkeyKing.h */,
 				50FBA6D31BA2BBE900E69BB3 /* Info.plist */,
 				10CDDF42237A8588005E8DE7 /* AnyActivity.swift */,
-				534EEF61249752A000B104F4 /* SecreMonkey.swift */,
 				10CDDF44237A8588005E8DE7 /* Extensions.swift */,
 				10CDDF43237A8588005E8DE7 /* Helpers.swift */,
 				10CDDF3F237A8588005E8DE7 /* MonkeyKing.swift */,
+				534EF4712497647D00B104F4 /* SecreMonkey.swift */,
 				10CDDF45237A8588005E8DE7 /* MonkeyKing+Error.swift */,
 				07211C7223B8D1AA0068A7C0 /* MonkeyKing+handleOpenURL.swift */,
 				07211C7823B8D37E0068A7C0 /* MonkeyKing+Message.swift */,
@@ -361,7 +361,7 @@
 				10CDDF46237A8588005E8DE7 /* MonkeyKing.swift in Sources */,
 				10CDDF4A237A8588005E8DE7 /* Helpers.swift in Sources */,
 				10CDDF47237A8588005E8DE7 /* Networking.swift in Sources */,
-				534EEF62249752A000B104F4 /* SecreMonkey.swift in Sources */,
+				534EF4722497647D00B104F4 /* SecreMonkey.swift in Sources */,
 				07211C8123B8EAE80068A7C0 /* MonkeyKing+SupportedPlatformCapable.swift in Sources */,
 				07211C7B23B8D3A60068A7C0 /* MonkeyKing+OAuth.swift in Sources */,
 				07211C7D23B8D40D0068A7C0 /* MonkeyKing+Program.swift in Sources */,

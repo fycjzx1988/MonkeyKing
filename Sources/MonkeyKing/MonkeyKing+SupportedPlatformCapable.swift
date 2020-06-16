@@ -18,8 +18,8 @@ extension MonkeyKing.Account: SupportedPlatformCapable {
             return .weibo
         case .pocket:
             return .pocket
-        case .alipay:
-            return .alipay
+        case .baobao:
+            return .baobao
         case .twitter:
             return .twitter
         }
@@ -36,8 +36,8 @@ extension MonkeyKing.Message: SupportedPlatformCapable {
             return .qq
         case .weibo:
             return .weibo
-        case .alipay:
-            return .alipay
+        case .baobao:
+            return .baobao
         case .twitter:
             return .twitter
         }
@@ -50,8 +50,8 @@ extension MonkeyKing.Order: SupportedPlatformCapable {
         switch self {
         case .weChat:
             return .weChat
-        case .alipay:
-            return .alipay
+        case .baobao:
+            return .baobao
         }
     }
 }

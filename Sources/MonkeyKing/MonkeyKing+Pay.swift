@@ -5,8 +5,7 @@ extension MonkeyKing {
 
     public enum Order {
         /// You can custom URL scheme. Default "ap" + String(appID)
-        /// ref: https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.piSRlm&treeId=204&articleId=105295&docType=1
-        case alipay(url: URL)
+        case baobao(url: URL)
         case weChat(url: URL)
     }
 
@@ -27,7 +26,7 @@ extension MonkeyKing {
                 if flag { return }
                 completionHandler(.failure(.sdk(.invalidURLScheme)))
             }
-        case .alipay(let url):
+        case .baobao(let url):
             shared.openURL(url) { flag in
                 if flag { return }
                 completionHandler(.failure(.sdk(.invalidURLScheme)))

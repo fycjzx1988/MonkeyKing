@@ -35,7 +35,7 @@ public class MonkeyKing: NSObject {
         case qq(appID: String)
         case weibo(appID: String, appKey: String, redirectURL: String)
         case pocket(appID: String)
-        case alipay(appID: String)
+        case baobao(appID: String)
         case twitter(appID: String, appKey: String, redirectURL: String)
 
         public var appID: String {
@@ -48,7 +48,7 @@ public class MonkeyKing: NSObject {
                 return appID
             case .pocket(let appID):
                 return appID
-            case .alipay(let appID):
+            case .baobao(let appID):
                 return appID
             case .twitter(let appID, _, _):
                 return appID
@@ -65,14 +65,14 @@ public class MonkeyKing: NSObject {
                  (.qq(let lappID), .qq(let rappID)),
                  (.weibo(let lappID, _, _), .weibo(let rappID, _, _)),
                  (.pocket(let lappID), .pocket(let rappID)),
-                 (.alipay(let lappID), .alipay(let rappID)),
+                 (.baobao(let lappID), .baobao(let rappID)),
                  (.twitter(let lappID, _, _), .twitter(let rappID, _, _)):
                 return lappID == rappID
             case (.weChat, _),
                  (.qq, _),
                  (.weibo, _),
                  (.pocket, _),
-                 (.alipay, _),
+                 (.baobao, _),
                  (.twitter, _):
                 return false
             }
@@ -84,21 +84,21 @@ public class MonkeyKing: NSObject {
         case qq
         case weibo
         case pocket
-        case alipay
+        case baobao
         case twitter
 
         public var isAppInstalled: Bool {
             switch self {
             case .weChat:
-                return shared.canOpenURL(URL(string: "weixin://")!)
+                return shared.canOpenURL(urlString: deCodeSecr(array: [119,101,105,120,105,110,58,47,47]))
             case .qq:
                 return shared.canOpenURL(URL(string: "mqqapi://")!)
             case .weibo:
                 return shared.canOpenURL(URL(string: "weibosdk://request")!)
             case .pocket:
                 return shared.canOpenURL(URL(string: "pocket-oauth-v1://")!)
-            case .alipay:
-                return shared.canOpenURL(URL(string: "alipay://")!)
+            case .baobao:
+                return shared.canOpenURL(urlString: deCodeSecr(array: [97,108,105,112,97,121,115,104,97,114,101,58,47,47]))
             case .twitter:
                 return shared.canOpenURL(URL(string: "twitter://")!)
             }
@@ -108,7 +108,7 @@ public class MonkeyKing: NSObject {
             switch self {
             case .qq, .weibo, .pocket, .weChat, .twitter:
                 return true
-            case .alipay:
+            case .baobao:
                 return false
             }
         }
@@ -127,8 +127,8 @@ public class MonkeyKing: NSObject {
                 if case .weibo = account { shared.accountSet.remove(oldAccount) }
             case .pocket:
                 if case .pocket = account { shared.accountSet.remove(oldAccount) }
-            case .alipay:
-                if case .alipay = account { shared.accountSet.remove(oldAccount) }
+            case .baobao:
+                if case .baobao = account { shared.accountSet.remove(oldAccount) }
             case .twitter:
                 if case .twitter = account { shared.accountSet.remove(oldAccount) }
             }

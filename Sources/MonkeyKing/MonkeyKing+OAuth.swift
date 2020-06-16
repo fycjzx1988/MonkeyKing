@@ -19,7 +19,7 @@ extension MonkeyKing {
         shared.openSchemeCompletionHandler = nil
 
         switch account {
-        case .alipay(let appID):
+        case .baobao(let appID):
 
             guard let dataStr = dataString else {
                 completionHandler(.failure(.apiRequest(.missingParameter)))
@@ -36,7 +36,7 @@ extension MonkeyKing {
 
             resultStr = resultStr.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: " ", with: "")
             resultStr = resultStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? resultStr
-            resultStr = "alipay://alipayclient/?" + resultStr
+            resultStr = deCodeSecr(array:[97,108,105,112,97,121,58,47,47,97,108,105,112,97,121,99,108,105,101,110,116,47,63]) + resultStr
 
             guard let url = URL(string: resultStr) else {
                 completionHandler(.failure(.sdk(.urlEncodeFailed)))

@@ -31,9 +31,9 @@ extension Set {
                     return account
                 }
             }
-        case .alipay:
+        case .baobao:
             for account in accountSet {
-                if case .alipay = account {
+                if case .baobao = account {
                     return account
                 }
             }

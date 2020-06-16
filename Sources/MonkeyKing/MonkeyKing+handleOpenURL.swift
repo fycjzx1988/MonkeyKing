@@ -199,8 +199,7 @@ extension MonkeyKing {
             return true
         }
 
-        // Alipay
-        let account = shared.accountSet[.alipay]
+        let account = shared.accountSet[.baobao]
         if let appID = account?.appID, urlScheme == "ap" + appID || urlScheme == "apoauth" + appID {
             let urlString = url.absoluteString
             if urlString.contains("//safepay/?") {

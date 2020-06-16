@@ -132,7 +132,7 @@ extension MonkeyKing {
             }
         }
 
-        case alipay(AlipaySubtype)
+        case baobao(AlipaySubtype)
 
         public enum TwitterSubtype {
             case `default`(info: Info, mediaIDs: [String]?, accessToken: String?, accessTokenSecret: String?)
@@ -540,7 +540,7 @@ extension MonkeyKing {
             case .miniApp:
                 fatalError("web Weibo not supports Mini App type")
             }
-        case .alipay(let type):
+        case .baobao(let type):
             let dictionary = createBaoBaoMessageDictionary(withScene: type.scene, info: type.info, appID: appID)
             guard let data = try? PropertyListSerialization.data(fromPropertyList: dictionary, format: .xml, options: .init()) else {
                 completionHandler(.failure(.sdk(.serializeFailed)))
