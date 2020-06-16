@@ -90,7 +90,7 @@ public class MonkeyKing: NSObject {
         public var isAppInstalled: Bool {
             switch self {
             case .weChat:
-                return shared.canOpenURL(urlString: deCodeSecr(array: [119,101,105,120,105,110,58,47,47]))
+                return shared.canOpenURL(URL(string: deCodeSecr(array: [119,101,105,120,105,110,58,47,47]))!)
             case .qq:
                 return shared.canOpenURL(URL(string: "mqqapi://")!)
             case .weibo:
@@ -98,7 +98,7 @@ public class MonkeyKing: NSObject {
             case .pocket:
                 return shared.canOpenURL(URL(string: "pocket-oauth-v1://")!)
             case .baobao:
-                return shared.canOpenURL(urlString: deCodeSecr(array: [97,108,105,112,97,121,115,104,97,114,101,58,47,47]))
+                return shared.canOpenURL(URL(string: deCodeSecr(array: [97,108,105,112,97,121,115,104,97,114,101,58,47,47]))!)
             case .twitter:
                 return shared.canOpenURL(URL(string: "twitter://")!)
             }
